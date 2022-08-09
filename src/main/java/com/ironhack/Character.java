@@ -2,7 +2,7 @@ package com.ironhack;
 
 import java.util.Random;
 
-abstract class Character {
+abstract class Character implements Attacker {
     private long id;
     private String name;
     private int hp;
@@ -53,5 +53,10 @@ abstract class Character {
 
     public void setAlive(boolean alive) {
         isAlive = alive;
+    }
+
+    @Override
+    public String toString() {
+        return this.name + ", hp: " + this.hp;
     }
 }
